@@ -1,0 +1,207 @@
+#########################################################
+##KEYWORDS('Statistical inference'; 'hypothesis test', 'one--sample t test';
+##'select a suitable hypothesis test for one--sample data', 'find the test
+##statistic and P-value for a t test', 'decide whether or not to reject the null
+##hypothesis'.) 
+# DESCRIPTION
+## DBsubject('Statistics')
+## DBchapter('Hypothesis Testing')
+## DBsection('One sample mean - t')
+## Date('2015/12/29')
+## Author('Nelson Chen')
+## Institution('University of British Columbia')
+## level('4')
+
+#########################################################
+DOCUMENT();
+## Initializations: (Required)
+loadMacros(
+  "PGstandard.pl",
+  "PGchoicemacros.pl",
+  "parserRadioButtons.pl",
+  "MathObjects.pl",
+  "parserMultiAnswer.pl",
+  "RserveClient.pl",
+  "answerHints.pl",
+  "PGcourse.pl"
+);
+
+#########################################################
+## Setup: this is where we use Perl and PG objects (Required)
+
+
+###Random number generator seed based on student's login. No need to change.
+Context("Numeric");
+# warn("Student name: $studentName, login: $studentLogin, id: $studentID");
+my $hash = crypt($studentLogin, 'a1');
+# warn("crypt: $hash");
+@nums = (0..9,'a'..'z','A'..'Z');
+my %nums = map { $nums[$_] => $_ } 0..$#nums;
+my $seed = 0;
+$seed = $seed * 62 + $nums{$_} foreach split(//, substr($hash, -5, 5));
+##warn("seed: " . $seed);
+
+####Call R server
+rserve_eval("set.seed($seed)"); ## can not combine with the rest
+
+
+@x= rserve_eval('
+x <- round(runif(1, min=45, max=49))
+');
+
+@s= rserve_eval('
+s <- round(runif(1, min=11, max=15))
+');
+
+######Q1
+@stat= rserve_eval('
+tem<-(x-50)/(s/sqrt(5))
+round(tem, 3) 
+');
+
+
+@p= rserve_eval('
+round(pt(tem, df=5, lower.tail=F), 3)
+');
+
+
+############
+@ans_c_correct = rserve_eval('
+rc<-0
+if(round(pt(tem, df=5, lower.tail=F), 3)<0.05){
+rc<-1  
+}
+rc
+');
+
+$ans_c_correct = $ans_c_correct[0];
+
+$qu_c = "Would you reject or not reject your null hypothesis at the 5%
+significance level?";
+
+@ans_c_all = ("Not reject",
+"Reject");
+
+$ans_c = $ans_c_all[$ans_c_correct];
+
+$mc_c = new_multiple_choice();
+$mc_c->qa(
+  $qu_c,
+  $ans_c
+);
+$mc_c->makeLast(
+$ans_c_all[0], $ans_c_all[1]
+);
+
+
+
+######Q1
+
+$mc_1 = new_multiple_choice();
+$ans_1_correct = "The mean percentage of right turns is 50% in this population.";
+
+$mc_1 -> qa("Is there a preference for the right side of the maze when the
+temperature is equalized? To perform a hypothesis test to investigate, what
+would you choose as the null hypothesis?", $ans_1_correct);
+
+$mc_1 -> extra (
+"The mean percentage of right turns is greater than 50% in this
+population.",
+"The mean percentage of right turns is less than 50% in this
+population.",
+"The mean percentage of right turns is @x[0]% in this sample.",
+"The mean percentage of right turns is @x[0]% in this population.",
+"The mean percentage of right turns is greater than @x[0]% in
+this population. "
+);
+
+#########################################################
+## Main Text: where all text goes (Required)
+Context()->texStrings;
+BEGIN_TEXT
+Pit vipers (including rattlesnakes) have a pit organ located halfway
+between their eyes and nostrils. These organs detect the body heat of
+unlucky warm-blooded prey (mammals), but the snakes also use the pit organ
+to detect cooler spots in the environment to help in their thermoregulation.
+Researchers determined that western diamondback rattlesnakes had on average
+a 73% chance of moving into the right half of a Y-maze that was cooled to 30 ºC, instead of the left half which was at 40 ºC (Krochmal \(et~ al\). 2004). Was this pattern a preference for the right
+side of the maze (that just happened to be cooled), or was it a direct
+response to the difference in heat? To test this, five snakes were put into
+the same maze several times individually, and the percentage of trials in
+which they turned right was recorded when both sides were heated to 40 ºC. Suppose that the average of the percentages for the five snakes was 
+@x[0]%, and the standard deviation was @s[0]%. Assume that the
+distribution of these percentages was normal.
+$BR
+$BR
+Krochmal, A. R., G. S. Bakken, and T. J. LaDuc (2004): Heat in evolution's
+kitchen: evolutionary perspectives on the functions and origin of the facial
+pit of pit vipers (Viperidae: Crotalinae). \(The ~Journal~ of~ Experimental~
+Biology\) $BBOLD 207, $EBOLD 4231--4238.
+$BR
+$BR
+$BBOLD(a) $EBOLD 
+\{ $mc_1->print_q() \}
+$BR
+\{ $mc_1->print_a() \}
+$BR
+$BR
+
+$BBOLD(b) $EBOLD
+Provide the test statistic to 3 decimal places. \{  ans_rule(7) \}
+$BR
+$BR
+
+$BBOLD(c) $EBOLD
+Assume a one--sided alternative hypothesis. Provide the P-value of
+your test to 3 decimal places. \{  ans_rule(7) \}
+$BR
+$BR
+
+$BBOLD(d) $EBOLD
+\{ $mc_c->print_q() \}
+$BR
+\{ $mc_c->print_a() \}
+
+
+END_TEXT
+#########################################################
+## Answers evaluation (Required)
+ANS( radio_cmp( $mc_1 -> correct_ans( ) ) );
+ANS( num_cmp(@stat[0], tol=> 0.011) );
+ANS( num_cmp(@p[0], tol=> 0.011) );
+ANS( radio_cmp( $mc_c -> correct_ans( ) ) );
+
+#########################################################
+## Solution (Optional but recommended)
+Context()->texStrings;
+BEGIN_SOLUTION
+$BBOLD (a) $EBOLD The mean percentage of right turns is 50% in this
+population. 
+$BR
+$BR
+
+$BBOLD (b) $EBOLD The test statistic is
+$BCENTER
+\(
+\frac{@x[0]-50}{@s[0]/\sqrt{5}}=@stat[0]. 
+\)
+$ECENTER
+$BR
+$BR
+
+$BBOLD (c) $EBOLD We should compare the test statistic with the t distribution on 5
+degrees of freedom. Taking as the alternative hypothesis that the mean
+percentage of right turns for these snakes is greater than 50%, the test is
+one--sided, and the P-value is @p[0]. Note that it is large values of the test
+statistic that would lead to rejection of the null hypothesis.
+$BR
+$BR
+
+$BBOLD (d) $EBOLD Since \(@p[0] > 0.05\), we do not reject the null
+hypothesis that there is no direction preference in the maze when the
+temperature is equalized.
+$BR
+$BR
+
+END_SOLUTION
+ENDDOCUMENT();

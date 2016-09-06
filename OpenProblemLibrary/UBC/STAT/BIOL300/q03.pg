@@ -1,0 +1,277 @@
+#########################################################
+##KEYWORDS('Statistical inference'; 'hypothesis test', 'one--sample t test';
+##'select a suitable hypothesis test for one--sample data', 'choose one--sided or
+##two--sided alternative', 'find the test statistic and P-value for a t test',
+##'decide whether or not to reject the null hypothesis'.) 
+# DESCRIPTION
+## DBsubject('Statistics')
+## DBchapter('Hypothesis Testing')
+## DBsection('One sample mean - t')
+## Date('2015/12/29')
+## Author('Nelson Chen')
+## Institution('University of British Columbia')
+## level('4')
+
+#########################################################
+DOCUMENT();
+## Initializations: (Required)
+loadMacros(
+  "PGstandard.pl",
+  "PGchoicemacros.pl",
+  "parserRadioButtons.pl",
+  "MathObjects.pl",
+  "parserMultiAnswer.pl",
+  "RserveClient.pl",
+  "answerHints.pl",
+  "PGcourse.pl"
+);
+
+#########################################################
+## Setup: this is where we use Perl and PG objects (Required)
+
+
+###Random number generator seed based on student's login. No need to change.
+Context("Numeric");
+# warn("Student name: $studentName, login: $studentLogin, id: $studentID");
+my $hash = crypt($studentLogin, 'a1');
+# warn("crypt: $hash");
+@nums = (0..9,'a'..'z','A'..'Z');
+my %nums = map { $nums[$_] => $_ } 0..$#nums;
+my $seed = 0;
+$seed = $seed * 62 + $nums{$_} foreach split(//, substr($hash, -5, 5));
+##warn("seed: " . $seed);
+
+####Call R server
+rserve_eval("set.seed($seed)"); ## can not combine with the rest
+
+####plots
+$plot=rserve_start_plot('png');
+rserve_eval('
+y <- c(-2, 2, 6, 9, 13, 2, 5, 7, 2, -6, 4, 3, 2, 6,-6)
+x <- sample(y, 14)
+hist(x, xlab="Preference for larger-male sound", main="Histogram
+of Female Koala Preferences")
+');
+$plotpath=rserve_finish_plot($plot);
+
+@x= rserve_eval('
+x
+');
+
+
+@meanx= rserve_eval('
+round(mean(x), 4)
+');
+
+@sdx= rserve_eval('
+round(sd(x), 4)
+');
+
+
+####Build table
+$Table = 
+"\(       
+\begin{array}{ccccccc}
+@x[0] &  @x[1] & @x[2] & @x[3] & @x[4] & @x[5] & @x[6] &
+@x[7] &  @x[8] & @x[9] & @x[10] & @x[11] & @x[12] & @x[13]
+\end{array}
+\)"
+;
+
+######Q1
+@stat= rserve_eval('
+ttest <- t.test(x)
+round(ttest$statistic, 3)
+');
+
+
+@p= rserve_eval('
+round(ttest$p.value, 3)
+');
+
+
+@p4= rserve_eval('
+round(ttest$p.value, 4)
+');
+
+
+@y= rserve_eval('
+round(pt(ttest$statistic, df=13, lower.tail=FALSE),4)
+');
+
+############
+@ans_c_correct = rserve_eval('
+rc<-0
+if(ttest$p.value<0.05){
+rc<-1  
+}
+rc
+');
+
+$ans_c_correct = $ans_c_correct[0];
+
+$qu_c = "Would you reject or not reject your null hypothesis at the 5%
+significance level?";
+
+@ans_c_all = ("Not reject",
+"Reject");
+
+$ans_c = $ans_c_all[$ans_c_correct];
+
+$mc_c = new_multiple_choice();
+$mc_c->qa(
+  $qu_c,
+  $ans_c
+);
+$mc_c->makeLast(
+$ans_c_all[0], $ans_c_all[1]
+);
+
+
+
+######Q1
+
+$mc_1 = new_multiple_choice();
+$mc_1 -> qa( "In performing a hypothesis test here, what would you take as the null
+hypothesis?", "On average, female koalas show no preference to body size cues in
+their responses to simulated male sounds.");
+
+$mc_1 -> extra (
+"On average, female koalas show a preference to body size cues in their responses to simulated male sounds.",
+"The sample of female koalas show no preference to body size cues in their responses to simulated male sounds.",
+"The sample of female koalas show a preference to body size cues in their responses to simulated male sounds.",
+"On average, female koalas do not respond to simulated male sounds."
+);
+
+######Q2
+
+$mc_2 = new_multiple_choice();
+
+$ans_2_correct = "Two--sided";
+
+$mc_2 -> qa( "In conducting the hypothesis test here, would the researchers take a
+one--sided or two--sided alternative hypothesis?", $ans_2_correct);
+
+$mc_2 -> extra(
+"One--sided",
+"It does not matter"
+);
+
+#########################################################
+## Main Text: where all text goes (Required)
+Context()->texStrings;
+BEGIN_TEXT
+Male koalas bellow during the breeding season, but do females pay
+attention? Charlton \(et ~al\). (2012) measured responses of estrous
+female koalas to playbacks of bellows that had been modified on the computer
+to simulate male callers of different body size. Females were placed one at
+a time into an enclosure while loudspeakers played bellows simulating a
+larger male on one side (randomly chosen) and a smaller male on the other
+side. Male bellows were played repeatedly, alternating between sides, over
+10 minutes. Females often turned to look in the direction of a loudspeaker
+(invisible to her) during a trial. The observations show the preference of
+each of 14 females for the simulated sound of the "larger" male. Preference was calculated as the number of
+looks toward the larger-male side minus the number of looks to the
+smaller-male side. Preference is positive if a female looked most often
+toward the larger male, and it is negative if she looked most often in the
+direction of the smaller male. The data are below, and illustrated via a
+histogram: 
+$BR
+$BR
+$BCENTER
+$Table
+$ECENTER
+$BR
+$BR
+$BCENTER
+\{ image($plotpath, width=>400, height=>250)   \}
+$ECENTER
+$BR
+$BR
+It is of interest to investigate whether female koalas pay attention to body
+size cues in simulated male sounds.
+$BR
+$BR
+Charlton, B. D., W. A. H. Ellis, J. Brumm, K. Nilsson, and W. T. Fitch
+(2012): Female koalas prefer bellows in which lower formants indicate larger
+males. \(Animal~Behaviour\) $BBOLD 84, $EBOLD 1565-1571.
+$BR
+$BR
+$BBOLD(a) $EBOLD 
+\{ $mc_1->print_q() \}
+$BR
+\{ $mc_1->print_a() \}
+$BR
+$BR
+
+$BBOLD(b) $EBOLD 
+\{ $mc_2->print_q() \}
+$BR
+\{ $mc_2->print_a() \}
+$BR
+$BR
+
+$BBOLD(c) $EBOLD
+Perform your test. Provide the test statistic to 3 decimal places. \{  ans_rule(7) \}
+$BR
+$BR
+
+
+$BBOLD(d) $EBOLD
+Provide the P-value of your test to 3 decimal places. \{  ans_rule(7) \}
+$BR
+$BR
+
+$BBOLD(d) $EBOLD
+\{ $mc_c->print_q() \}
+$BR
+\{ $mc_c->print_a() \}
+
+
+END_TEXT
+#########################################################
+## Answers evaluation (Required)
+ANS( radio_cmp( $mc_1 -> correct_ans( ) ) );
+ANS( radio_cmp( $mc_2 -> correct_ans( ) ) );
+ANS( num_cmp(@stat[0], tol=> 0.011) );
+ANS( num_cmp(@p[0], tol=> 0.011) );
+ANS( radio_cmp( $mc_c -> correct_ans( ) ) );
+
+#########################################################
+## Solution (Optional but recommended)
+Context()->texStrings;
+BEGIN_SOLUTION
+$BBOLD (a) $EBOLD On average, female koalas show no preference to body
+size cues in their responses to simulated male sounds. 
+$BR
+$BR
+
+$BBOLD (b) $EBOLD A two--sided alternative appears most reasonable. 
+$BR
+$BR
+
+$BBOLD (c) $EBOLD The test statistic is
+$BCENTER
+\(
+\frac{@meanx[0]}{@sdx[0]/\sqrt{14}}=@stat[0]. 
+\)
+$ECENTER
+$BR
+$BR
+
+$BBOLD (d) $EBOLD We should compare the test statistic with the t distribution on 13
+degrees of freedom. As the test is two--sided, the P-value is @p4[0] noting that if the null hypothesis is true the probability of observing a value larger than the test statistic is @y[0]. 
+$BR
+$BR
+
+
+$BBOLD (d) $EBOLD
+If \(@p4[0] < 0.05 \), we reject the
+null hypothesis that on average female koalas show no preference to body
+size cues in their responses to simulated male sounds.
+
+
+
+
+END_SOLUTION
+ENDDOCUMENT();
