@@ -1,6 +1,7 @@
-## DBsubject('Statistics')
-## DBchapter('Time Series')
-## DBsection('Bivariate Series') 
+## DBsubject(Statistics)
+## DBchapter(Time series)
+## DBsection(Autocorrelation)
+## Level(4)
 ## level(4)
 
 #########################################################
@@ -9,12 +10,12 @@ DOCUMENT();
 loadMacros(
   "PGstandard.pl",
   "PGchoicemacros.pl",
-  "PGcourse.pl",
   "parserRadioButtons.pl",
   "MathObjects.pl",
   "parserMultiAnswer.pl",
   "RserveClient.pl",
   "answerHints.pl",
+  "PGcourse.pl"
 );
 
 #########################################################

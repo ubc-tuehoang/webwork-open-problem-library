@@ -1,37 +1,22 @@
 #DESCRIPTION
-## DBsubject('Probability')
-## DBchapter('Discrete distributions')
-## DBsection('Binomial')
 ## level(3)
-##KEYWORDS('probability', 'Binomial distribution')
+## DBsubject(Probability)
+## DBchapter(Discrete distributions)
+## DBsection(Binomial)
+## Level(3)
+## KEYWORDS('probability', 'Binomial distribution','statistics', 'multiple choice', 'probability')
 ##ENDDESCRIPTION
 ## Nelson Chen
 ## Jun 8th, 2016. 
 ##Attempts: Two. 
 
 
-
-## DBsubject('Statistics')
-## DBchapter('Distributions')
-## DBsection('Binomial Distribution')
-## Level(3)
-## Date('06/06/2012')
-## Author('Djun Kim')
-## Institution('The University of British Columbia')
-## TitleText1('')
-## EditionText1('')
-## AuthorText1('')
-## Section1('')
-## Problem1('')
-
 ## Based on /problems/probability/probabilityMC34.pg authored by Lance Robson
 
 DOCUMENT();
 
 loadMacros(
-"PGstandard.pl",
-"PGchoicemacros.pl",
-"PGstandard.pl",
+  "PGstandard.pl",
   "PGchoicemacros.pl",
   "parserRadioButtons.pl",
   "MathObjects.pl",

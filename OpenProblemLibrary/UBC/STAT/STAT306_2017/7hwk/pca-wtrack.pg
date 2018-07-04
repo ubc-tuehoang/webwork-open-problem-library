@@ -5,19 +5,17 @@
 #########################################################
 
 #########################################################
-## KEYWORDS('statistics', 'principal component analysis','covariance')
 #########################################################
 
 #########################################################
-## DBsubject('Statistics')
-## Date('2015/03/30')
-## Author('H Joe')
-## Institution('UBC')
-## TitleText1('')
-## EditionText1('')
-## AuthorText1('')
-## Section1('')
-## Problem1('')
+## DBsubject(Statistics)
+## DBchapter(Multiple regression)
+## DBsection(Nonlinear regression)
+## Date(2015/03/30)
+## Institution(UBC)
+## Author(H Joe)
+## Level(4)
+## KEYWORDS('statistics', 'principal component analysis','covariance')
 #########################################################
 
 #########################################################

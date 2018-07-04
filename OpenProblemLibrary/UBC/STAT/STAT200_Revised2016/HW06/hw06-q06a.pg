@@ -1,8 +1,4 @@
 ## DESCRIPTION
-## DBsubject('Probability')
-## DBchapter('Discrete distributions')
-## DBsection('Normal approximation to binomial')
-## Level(4)
 ## KEYWORDS('Probability', 'Normal distribution', 'Binomial distribution', 'Normal
 ## approximation')
 ## ENDDESCRIPTION
@@ -11,26 +7,21 @@
 ##Attempts: Three. 
 
 
+## DBsubject(Probability)
+## DBchapter(Discrete distributions)
+## DBsection(Normal approximation to binomial)
+## Date(06/26/2012)
+## Institution(UBC)
+## Author(Djun Kim and Lance R)
+## Level(4)
 ## KEYWORDS('statistics', 'sampling distributions','normal sampling distributions')
-## DBsubject('Statistics')
-## DBchapter('Sampling Distributions and the Central Limit Theorem')
-## DBsection('Central Limit Theorem')
-## Level(5)
-## Date('06/26/2012')
-## Author('Djun Kim and Lance R')
-## Institution('UBC')
-## TitleText1('')
-## EditionText1('')
-## AuthorText1('')
-## Section1('')
-## Problem1('')
 
 
 
 DOCUMENT();        # This should be the first executable line in the problem.
 
 loadMacros(
-"PGstandard.pl",
+  "PGstandard.pl",
   "PGchoicemacros.pl",
   "parserRadioButtons.pl",
   "MathObjects.pl",
@@ -147,9 +138,9 @@ sample of @n[0] such cans.
 $PAR
 $BBOLD Part i) $EBOLD
 Using the information about the distribution of the net weight
-given by the manufacturer, find the probability that the mean
+given by the manufacturer, find the probability that the mean
 weight of the sample is less than @ma[0] ounces. (Please carry answers
-to at least six decimal places in intermediate steps. Give your final
+to at least six decimal places in intermediate steps. Give your final
 answer to the nearest three decimal places).
 
 $PAR
@@ -187,7 +178,7 @@ $BR
 
 (b) If Y denotes the number of cans out of @n[0] that
 are overweight, then \( \hat{p}=Y/\mathtt{@n[0]} \) is the sample proportion
-overweight. Now we know that the true proportion overweight is \( p=\mathtt{@p[0]},\) 
+overweight. Now we know that the true proportion overweight is \( p= P(Z>(6-@m[0])/@s[0]) = \mathtt{@p[0]},\) 
 and so by the Central Limit Theorem we have that approximately
 \(
 \hat{p} \sim N\left( \mathtt{@p[0],}\sqrt{\mathtt{@p[0]}\left( 1-\mathtt{@p[0]}\right) /
@@ -213,7 +204,7 @@ p=\mathtt{@p[0]}
 Approximately then, 
 
 \begin{eqnarray*}
-\frac{Y-\mathtt{@n[0]*@p[0]}}{\sqrt{\mathtt{@n[0]*@p[0]}\left( \mathtt{1-@p[0]}\right) }}
+\frac{Y-\mathtt{@n[0] \times @p[0]}}{\sqrt{\mathtt{@n[0] \times @p[0]}\left( \mathtt{1-@p[0]}\right) }}
 &\sim&
 N\left( 0,1\right) .
 \end{eqnarray*}
@@ -225,20 +216,20 @@ $BR
 
 Furthermore, the expected value of W is
 \begin{eqnarray*}
-E\left( W\right)  &=&100\times \frac{\mathtt{@n[0]*@p[0]}}{\mathtt{@n[0]}} \\
-&=&100 * \mathtt{@p[0],}
+E\left( W\right)  &=&100\times \frac{\mathtt{@n[0] \times @p[0]}}{\mathtt{@n[0]}} \\
+&=&100 \times \mathtt{@p[0],}
 \end{eqnarray*}
 and the variance of W is 
 
 \begin{eqnarray*}
 \mathtt{Var}\left( W\right)  &=&\frac{100^{2}}{\mathtt{@n[0]}^{2}}\times \mathtt{
-@n[0]*@p[0]}\left( 1-\mathtt{@p[0]}\right)  \\
-&=&\frac{100^{2} * \mathtt{@p[0]}\left( 1-\mathtt{@p[0]}\right) }{\mathtt{@n[0]}}.
+@n[0] \times @p[0]}\left( 1-\mathtt{@p[0]}\right)  \\
+&=&\frac{100^{2} \times \mathtt{@p[0]}\left( 1-\mathtt{@p[0]}\right) }{\mathtt{@n[0]}}.
 \end{eqnarray*}
 Hence approximately
 
 \begin{eqnarray*}
-\frac{W-100 * \mathtt{@p[0]}}{\sqrt{100^{2} * \mathtt{@p[0]}\left( 1-\mathtt{@p[0]}\right) /
+\frac{W-100 \times \mathtt{@p[0]}}{\sqrt{100^{2} \times \mathtt{@p[0]}\left( 1-\mathtt{@p[0]}\right) /
 \mathtt{@n[0]}}} &\sim& N\left( 0,1\right) .
 \end{eqnarray*}
 Therefore,
@@ -246,7 +237,7 @@ Therefore,
 \begin{eqnarray*}
 P\left( W>\mathtt{@pc[0]}\right)  &\approx &P\left( Z>\frac{\mathtt{@pc[0]}- 100 \times
 \mathtt{@p[0]}}{
-\sqrt{100^{2} * \mathtt{@p[0]} * \left( 1-\mathtt{@p[0]}\right) / \mathtt{@n[0]} }} \right)  \\
+\sqrt{100^{2} \times \mathtt{@p[0]} \times \left( 1-\mathtt{@p[0]}\right) / \mathtt{@n[0]} }} \right)  \\
 &=& @ans2[0]. 
 \end{eqnarray*}
 

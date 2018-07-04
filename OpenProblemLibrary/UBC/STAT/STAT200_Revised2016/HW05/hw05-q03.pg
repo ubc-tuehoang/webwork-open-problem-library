@@ -1,40 +1,24 @@
 #DESCRIPTION
-## DBsubject('Probability')
-## DBchapter('Discrete distributions')
-## DBsection('Binomial') 
 ##ENDDESCRIPTION
-##KEYWORDS('probability', 'Binomial distribution')
+## DBsubject(Probability)
+## DBchapter(Discrete distributions)
+## DBsection(Binomial)
+## Level(3)
+## KEYWORDS('probability', 'Binomial distribution')
 ## Nelson Chen
 ## Jun 8th, 2016. 
 
-
-
-## DBsubject('Statistics')
-## DBchapter('Probability')
-## DBsection('Random Variables')
-## Level(2)
-## KEYWORDS('Statistics, Probability, Random Variables');
-## Author('Djun Kim')
-## Institution('UBC')
-
 DOCUMENT();     
 loadMacros(
-  "PGstandard.pl",  
-  "PGauxiliaryFunctions.pl",
+  "PGstandard.pl",
   "MathObjects.pl",
-  "PGchoicemacros.pl",
-"PGstandard.pl",
   "PGchoicemacros.pl",
   "parserRadioButtons.pl",
-  "MathObjects.pl",
   "parserMultiAnswer.pl",
   "RserveClient.pl",
   "answerHints.pl",
-  "PGcourse.pl",
-  "MathObjects.pl",
-  "parserMultiAnswer.pl",
-  "RserveClient.pl",
-);     
+  "PGcourse.pl"
+);
 
 TEXT(  beginproblem() );
 

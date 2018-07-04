@@ -4,12 +4,13 @@
 ##population proportion', 'find approximate confidence interval for a population
 ##size given the count within the population with the characteristic of interest.) 
 # DESCRIPTION
-## DBsubject('Statistics')
-## DBchapter('Sample survey methods')
-## DBsection('Ratio estimators')
-## Date('2016/07/25')
-## Author('Bo Chang')
-## Institution('University of British Columbia')
+## DBsubject(Statistics)
+## DBchapter(Sample survey methods)
+## DBsection(Ratio estimators)
+## Date(2016/07/25)
+## Institution(University of British Columbia)
+## Author(Bo Chang)
+## Level(4)
 ## level('5')
 
 #########################################################

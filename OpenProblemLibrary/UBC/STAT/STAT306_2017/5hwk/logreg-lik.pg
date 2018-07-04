@@ -5,19 +5,17 @@
 #########################################################
 
 #########################################################
-## KEYWORDS('statistics', 'regression','likelihood')
 #########################################################
 
 #########################################################
-## DBsubject('Statistics')
-## Date('2017/03/06')
-## Author('H Joe')
-## Institution('UBC')
-## TitleText1('')
-## EditionText1('')
-## AuthorText1('')
-## Section1('')
-## Problem1('')
+## DBsubject(Statistics)
+## DBchapter(Generalized linear methods)
+## DBsection(Logistic regression)
+## Date(2017/03/06)
+## Institution(UBC)
+## Author(H Joe)
+## Level(3)
+## KEYWORDS('statistics', 'regression','likelihood')
 #########################################################
 
 #########################################################

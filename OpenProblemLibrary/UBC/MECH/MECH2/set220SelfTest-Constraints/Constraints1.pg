@@ -1,15 +1,19 @@
 ##DESCRIPTION
 ## 220 Self Test - Constraints
+## Mech 2, Department of Mechanical Engineering, UBC
 ##ENDDESCRIPTION
 
-##KEYWORDS('constraints', 'force', 'multiple choice')
 
-## DBsubject('Statics')
-## DBchapter('Equilibrium of a rigid body')
-## DBsection('Constraints and statical determinacy')
-## Date('6/27/2017')
-## Institution('University of British Columbia')
 ## Problem1
+## DBsubject(Statics)
+## DBchapter(Rigid bodies)
+## DBsection(Constraints and statical determinacy)
+## Date(6/27/2017)
+## Institution(University of British Columbia)
+## Level(4)
+## MO(1)
+## KEYWORDS('UBC', 'Mech2', 'MECH220', '220ST1', 'constraints', 'force', 'multiple choice', 'MECH220', 'SelfTest-Constraints')
+## RESOURCES('220Constraints-1.png')
 
 ########################################################################
 
@@ -22,17 +26,17 @@ loadMacros(
   "contextFraction.pl",
   "PGcourse.pl"
 );
-
+TEXT(beginproblem());
 $mc = RadioButtons(
-[ "force in x-direction", 
-"force in y-direction", 
-"force in x-y plane", 
-"force directed in \(0.866i, -0.500j\) direction", 
-"force directed in \(-0.866i, 0.500j\) direction",
-"force in x-y plane and moment about z-axis", 
-"force directed in \(0.866i, -0.500j\) direction and moment about z-axis",
-"force directed in \(-0.866i, 0.500j\) direction and moment about z-axis" ]
-,"force directed in \(-0.866i, 0.500j\) direction" # correct option
+[ "force in x-direction$BR", 
+"force in y-direction$BR", 
+"force in x-y plane$BR", 
+"force directed in \(0.866i, -0.500j\) direction$BR", 
+"force directed in \(-0.866i, 0.500j\) direction$BR",
+"force in x-y plane and moment about z-axis$BR", 
+"force directed in \(0.866i, -0.500j\) direction and moment about z-axis$BR",
+"force directed in \(-0.866i, 0.500j\) direction and moment about z-axis$BR" ]
+,"force directed in \(-0.866i, 0.500j\) direction$BR" # correct option
 ,labels => "ABC" );
 
 BEGIN_TEXT

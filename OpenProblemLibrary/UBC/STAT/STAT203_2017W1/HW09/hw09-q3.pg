@@ -1,9 +1,9 @@
 #DESCRIPTION
-## DBsubject('Probability')
-## DBchapter('Discrete distributions')
-## DBsection('Binomial')
-## Level(2) 
-##KEYWORDS('probability', 'Binomial distribution')
+## DBsubject(Probability)
+## DBchapter(Discrete distributions)
+## DBsection(Binomial)
+## Level(2)
+## KEYWORDS('probability', 'Binomial distribution')
 ##ENDDESCRIPTION
 ## Tagged by Nelson Chen
 ## Jun 9th, 2016. 
@@ -39,9 +39,9 @@ $incorrectParameter2b = (1-$prob)*$number;
 
 $mc = new_multiple_choice();
 $mc->qa(
-"The proportion of adults who own a cell phone in a certain 
+"The proportion of adults who own a cell phone in a large 
 Canadian city is believed to be $percent$PERCENT. $numberText adults are to 
-be selected at random from the city. Let \(X\) be the number in 
+be selected at random from this city. Let \(X\) be the number in 
 the sample who own a cell phone. Under the assumptions given, 
 the distribution of \(X\) is",
 "\(Bin($correctParameter1,$correctParameter2)\)"
@@ -70,8 +70,8 @@ ANS( radio_cmp( $mc->correct_ans() ) );
 Context()->texStrings;
 BEGIN_SOLUTION
 The Binomial distribution is taken to model the number of
-"successes" in a sequence of independent trials, each of which may be
-either a "success" or a "failure". In this case, "success" is defined as
+"successes" in a sequence of independent trials, each of which may be
+either a "success" or a "failure". In this case, "success" is defined as
 a person owning a cell phone.
 END_SOLUTION
 

@@ -1,8 +1,9 @@
 ## DESCRIPTION
-## DBsubject('Statistics')
-## DBchapter('Sampling Distributions')
-## DBsection('Sample mean')
+## DBsubject(Statistics)
+## DBchapter(Sampling distributions)
+## DBsection(Sample mean)
 ## Level(3)
+## KEYWORDS('statistics', 'sampling distributions','normal sampling distributions')
 ## KEYWORDS('Sampling distribution', 'Normal distribution', 'sample mean',
 ## 'sample size')
 ## ENDDESCRIPTION
@@ -11,35 +12,13 @@
 ##Attempts: Two. 
 
 
-
-## KEYWORDS('statistics', 'sampling distributions','normal sampling distributions')
-## DBsubject('Statistics')
-## DBchapter('Sampling Distributions and the Central Limit Theorem')
-## DBsection('Central Limit Theorem')
-## Level(5)
-## Date('10/08/2012')
-## Author('Djun Kim')
-## Institution('UBC')
-## TitleText1('')
-## EditionText1('')
-## AuthorText1('')
-## Section1('')
-## Problem1('')
-
-
-
 DOCUMENT();        # This should be the first executable line in the problem.
 
 loadMacros(
-"PG.pl",
-"PGbasicmacros.pl",
-"PGchoicemacros.pl",
-"PGanswermacros.pl",
-"PGnumericalmacros.pl",
-"PGstatisticsmacros.pl",
-"PGauxiliaryFunctions.pl",
- "PGstandard.pl",
+  "PGstandard.pl",
   "PGchoicemacros.pl",
+  "PGnumericalmacros.pl",
+  "PGstatisticsmacros.pl",
   "parserRadioButtons.pl",
   "MathObjects.pl",
   "parserMultiAnswer.pl",
@@ -134,6 +113,7 @@ $BR
 
 END_TEXT
 
+$showPartialCorrectAnswers = 1;
 ANS( radio_cmp( $mc1->correct_ans() ) );
 ANS( radio_cmp( $mc2->correct_ans() ) );
 ANS( radio_cmp( $mc3->correct_ans() ) );

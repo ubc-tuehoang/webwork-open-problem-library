@@ -1,9 +1,9 @@
 #DESCRIPTION
-## DBsubject('Probability')
-## DBchapter('Sample Space')
-## DBsection('Bayes theorem -- inverse probability')
-##KEYWORDS('Probability', 'Bayes theorem', 'conditional probability')
-## Level(3)
+## DBsubject(Probability)
+## DBchapter(Sample Space)
+## DBsection(Bayes theorem -- inverse probability)
+## Level(2)
+## KEYWORDS('Probability', 'Bayes theorem', 'conditional probability')
 ##ENDDESCRIPTION
 ##Tagged by Nelson Chen, Dec 30, 2016
 ##Attempts: Three. 
@@ -20,6 +20,8 @@ loadMacros(
   "answerHints.pl",
   "PGcourse.pl"
 );
+
+TEXT(beginproblem());
 
 #######
 @ph = rserve_eval('

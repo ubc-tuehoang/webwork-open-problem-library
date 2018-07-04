@@ -1,39 +1,24 @@
 ##DESCRIPTION
-## DBsubject('Statistics')
-## DBchapter('Regression', 'Data Analysis', 'Prediction')
-## DBsection('Least Squares')
 ## level(3)
-##KEYWORDS('statistics', 'regression', 'least squares')
+## DBsubject(Statistics)
+## DBchapter(Simple linear regression)
+## DBsection(Prediction)
+## Level(4)
+## KEYWORDS('statistics', 'regression', 'least squares')
 ##ENDDESCRIPTION
 ##Tagged by Nelson Chen on May, 14, 2016.
-
-
-## Tagged by Jonathan Baik
-## 2014-04-01
-## DBsubject('Statistics')
-## DBchapter('Correlation/Regression')
-## DBsection('Linear regression')
-## Level(3)
-## Date('09/09/2012')
-## Author('Djun Kim')
-## Institution('University of BC')
-## TitleText1('No Text')
-## EditionText1('?')
-## AuthorText1('?')
-## Section1('?')
-## Problem1('1')
 
 DOCUMENT();
 
 loadMacros(
-"PGstandard.pl",
+  "PGstandard.pl",
   "PGchoicemacros.pl",
   "parserRadioButtons.pl",
   "MathObjects.pl",
   "parserMultiAnswer.pl",
   "RserveClient.pl",
   "answerHints.pl",
-  "PGcourse.pl",
+  "PGcourse.pl"
 );
 
 #######

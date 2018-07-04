@@ -1,15 +1,19 @@
 ##DESCRIPTION
 ## Preview Test: Self Test - Sketching functions
+## Mech 2, Department of Mechanical Engineering, UBC
 ##ENDDESCRIPTION
 
-##KEYWORDS('multiple choice', 'function', 'power')
 
-## DBsubject('Precalculus')
-## DBchapter('Functions')
-## DBsection('Graphs')
-## Date('6/29/2017')
-## Institution('University of British Columbia')
 ## Problem4
+## DBsubject(Algebra)
+## DBchapter(Variation and power functions)
+## DBsection(Power functions)
+## Date(6/29/2017)
+## Institution(University of British Columbia)
+## Level(1)
+## MO(1)
+## KEYWORDS('UBC', 'Mech2', 'MECH220', '220ST11', 'sketching functions', 'multiple choice', 'function', 'power')
+## RESOURCES('220SketchingFunctions-4.png')
 
 ########################################################################
 
@@ -19,9 +23,11 @@ loadMacros(
   "PGstandard.pl",
   "MathObjects.pl",
   "parserRadioButtons.pl",
-  "contextFraction.pl",
+#  "contextFraction.pl",
   "PGcourse.pl"
 );
+
+TEXT(beginproblem());
 
 # Set up possible answers
 $mc = RadioButtons(
@@ -36,7 +42,7 @@ $mc = RadioButtons(
 BEGIN_TEXT
 The function below is a power function, \(y = x^a + b\); what is the value of \(a\)?
 $PAR
-\{ image( "220SketchingFunctions-4.png", width=>350, height=>382 ) \}
+\{ image( "220SketchingFunctions-4.png", width=>350, height=>382, tex_size=>400 ) \}
 $PAR
 \{ $mc->buttons() \}
 

@@ -1,30 +1,12 @@
 ## DESCRIPTION
-## DESCRIPTION
-## DBsubject('Statistics')
-## DBchapter('Experimental design')
-## DBsection('Concepts')
-## Level(4)
 ## ENDDESCRIPTION
+## DBsubject(Statistics)
+## DBchapter(Experimental design)
+## DBsection(Concepts)
+## Level(4)
 ## KEYWORDS('Experimental design', 'factors', 'treatments')
 ## Tagged by Nelson Chen. May 18, 2016.
 ##Attempts: Three. 
-
-
-
-
-## DBsubject('Statistics')
-## DBchapter('Experiment Design')
-## DBsection('Sampling')
-## Level(5)
-## Date('05/18/2012')
-## Author('Lance R')
-## Institution('University of BC')
-## TitleText1('')
-## EditionText1('')
-## AuthorText1('')
-## Section1('')
-## Problem1('')
-
 
 #
 # First comes some stuff that appears at the beginning of every problem
@@ -33,14 +15,9 @@
 DOCUMENT();        # This should be the first executable line in the problem.
 
 loadMacros(
-"PG.pl",
-"PGbasicmacros.pl",
-"PGchoicemacros.pl",
-"PGanswermacros.pl",
-"PGauxiliaryFunctions.pl",
-"PGasu.pl",
- "PGstandard.pl",
+  "PGstandard.pl",
   "PGchoicemacros.pl",
+  "PGasu.pl",
   "parserRadioButtons.pl",
   "MathObjects.pl",
   "parserMultiAnswer.pl",

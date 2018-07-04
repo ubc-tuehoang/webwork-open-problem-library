@@ -1,34 +1,25 @@
 ##DESCRIPTION
-## DBsubject('Statistics')
-## DBchapter('Exploratory data analysis/descriptive statistics')
-## DBsection('Summarizing data in tables')
 ## level(3)
 ## Tagged by Nelson Chen, May 14, 2016.
-##KEYWORDS('contingency table', 'conditional distribution')
+## DBsubject(Statistics)
+## DBchapter(Exploratory data analysis/descriptive statistics)
+## DBsection(Summarizing data in tables)
+## Level(2)
+## MO(1)
+## KEYWORDS('contingency table', 'conditional distribution')
 ##ENDDESCRIPTION
 ##Attempts: Two. 
-
-
-## Date('9/9/2012')
-## Author('Djun Kim')
-## Institution('University of British Columbia')
-## TitleText1('')
-## EditionText1('')
-## AuthorText1('')
-## Section1('')
-## Problem1('')
-## Modified by Nelson Chen on May, 14, 2016. 
 
 ########################################################################
 
 DOCUMENT();      
 
 loadMacros(
-   "PGstandard.pl",     # Standard macros for PG language
-   "PGchoicemacros.pl",
-   "MathObjects.pl",
-   "unionTables.pl",
-   "parserPopUp.pl",
+  "PGstandard.pl",
+  "PGchoicemacros.pl",
+  "MathObjects.pl",
+  "unionTables.pl",
+  "parserPopUp.pl",
   "parserRadioButtons.pl",
   "parserMultiAnswer.pl",
   "RserveClient.pl",

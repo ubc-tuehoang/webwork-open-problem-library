@@ -1,5 +1,6 @@
 ##DESCRIPTION
 ## Preview Test: Mech 220 Practice Review Quiz
+<<<<<<< HEAD
 ##ENDDESCRIPTION
 
 ##KEYWORDS('multiple choice', 'velocity', 'relative', 'ground')
@@ -10,6 +11,22 @@
 ## Date('7/5/2017')
 ## Institution('University of British Columbia')
 ## Problem3
+=======
+## Mech 2, Department of Mechanical Engineering, UBC
+##ENDDESCRIPTION
+
+
+## Problem3
+## DBsubject(Dynamics)
+## DBchapter(Kinematics of particles)
+## DBsection(Relative motion: translating axes)
+## Date(7/5/2017)
+## Institution(University of British Columbia)
+## Level(5)
+## MO(1)
+## KEYWORDS('UBC', 'Mech2', 'MECH220', 'Practice Review Quiz', '220PRQ', 'multiple choice', 'velocity', 'relative', 'ground')
+## RESOURCES('220-practice-3q.png')
+>>>>>>> upstream/master
 
 ########################################################################
 
@@ -22,6 +39,11 @@ loadMacros(
   "PGcourse.pl"
 );
 
+<<<<<<< HEAD
+=======
+TEXT(beginproblem());
+
+>>>>>>> upstream/master
 $mc = RadioButtons(
     [ "\(12.3\) \(m/s\) at \(76\) degrees N of E", "\(12.3\) \(m/s\) at \(14\) degrees W of N", "\(64.0\) \(m/s\) at \(11\) degrees N of E", "\(58.0\) \(m/s\) at \(20\) degrees N of E", "\(30.0\) \(m/s\) due E" ]
     ,"\(64.0\) \(m/s\) at \(11\) degrees N of E"
@@ -31,7 +53,11 @@ BEGIN_TEXT
 
 A railroad car travels at \(30\) \(m/s\) due East, as shown in the image below. A softball pitcher stands on the top of the car and faces approximately East. She throws a ball horizontally at \(35\) \(m/s\) relative to the car, at an angle of \(20\) degrees to the axis of the railroad car. What is the velocity of the ball relative to the ground?
 $PAR
+<<<<<<< HEAD
 \{ image( "220ReviewQuiz-3.gif", width=>430, height=>124 ) \}
+=======
+\{ image( "220-practice-3q.png", width=>430, height=>124 ) \}
+>>>>>>> upstream/master
 $PAR
 
 \{ $mc->buttons() \}

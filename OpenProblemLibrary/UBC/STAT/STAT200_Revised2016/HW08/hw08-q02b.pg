@@ -1,23 +1,15 @@
 ##DESCRIPTION
-## DBsubject('Statistics')
-## DBchapter('Hypothesis tests')
-## DBsection('One sample proportion')
+## DBsubject(Statistics)
+## DBchapter(Hypothesis tests)
+## DBsection(One sample proportion)
 ## Level(3)
+## KEYWORDS('statistics', 'statistical inference', 'hypothesis test', 'p-value', 'interpretatin')
 ## KEYWORDS('sample proportion', 'hypothesis tests', 'type I error', 'type II
 ## error')
 ##ENDDESCRIPTION
 ##Attempts: Four. 
 ##Tagged by Nelson Chen. Jul 7, 2016. 
 
-##KEYWORDS('statistics', 'statistical inference', 'hypothesis test', 'p-value', 'interpretatin')
-
-## DBsubject('Statistics')
-## DBchapter('Inference About a Population')
-## DBsection('Misc.')
-## Level(5)
-## Date('7/13/2012')
-## Author('Djun Kim')
-## Institution('UBC')
 
 
 ########################################################################
@@ -25,10 +17,10 @@
 DOCUMENT();      
 
 loadMacros(
-   "PGstandard.pl",     # Standard macros for PG language
-   "MathObjects.pl",
-   "PGchoicemacros.pl",
-"answerHints.pl",
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGchoicemacros.pl",
+  "answerHints.pl",
   "PGcourse.pl"
 );
 
@@ -215,7 +207,7 @@ $mc7->extra(
 
 Context()->texStrings;
 BEGIN_TEXT
-A report says that 82$PERCENT of British Columbians over the age of 25 are high school graduates. A survey of randomly selected residents of a certain city included 1290 who were over the age of 25, and 1135 of them were high school graduates. Does the city’s survey result provide sufficient evidence to contradict the reported value, 82$PERCENT?
+A report says that 82$PERCENT of British Columbians over the age of 25 are high school graduates. A survey of randomly selected residents of a certain city included 1290 who were over the age of 25, and 1135 of them were high school graduates. Does the survey result provide sufficient evidence to contradict the reported value, 82$PERCENT?
 
 $PAR
 
@@ -269,6 +261,7 @@ Context()->normalStrings;
 #
 #
 
+$showPartialCorrectAnswers = 1;
 
 ANS( radio_cmp( $mc1->correct_ans() ) );
 ANS( radio_cmp( $mc2->correct_ans() ) );
@@ -286,10 +279,10 @@ $BR
 $BR
 (ii) The claim of the
 report is negated by a proportion that is either smaller or higher than
-that claimed. Hence a two-sided alternative is reasonable.
+that claimed. Hence a twoÂ-sided alternative is reasonable.
 $BR
 $BR
-(iii) The low P-value suggests data that are unlikely if the reports claim
+(iii) The low P-value suggests data that are unlikely if the reportÂs claim
 is true.
 $BR
 $BR

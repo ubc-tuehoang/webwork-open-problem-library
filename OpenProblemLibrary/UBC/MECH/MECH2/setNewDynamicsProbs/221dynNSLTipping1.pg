@@ -6,11 +6,11 @@
 # ENDDESCRIPTION
 
 ## DBsubject(Dynamics)
-## DBchapter(Planar Rigid Body Kinetics)
-## DBsection(Newton’s second law)
+## DBchapter(Planar kinetics of rigid bodies)
+## DBsection(Sliding, rolling, tipping)
 ## Institution(University of British Columbia)
 ## Author(Agnes d’Entremont)
-## Level(3)
+## Level(5)
 ## KEYWORDS(‘Newton’s second law’,’tipping’,’frictionless’, ‘cabinet’)
 ## RESOURCES('221dynNSLTipping1.png')
 

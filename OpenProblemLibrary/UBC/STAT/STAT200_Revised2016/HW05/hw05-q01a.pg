@@ -1,39 +1,26 @@
 ## DESCRIPTION
 ## ENDDESCRIPTION
-## DBsubject('Statistics')
-## DBchapter('Exploratory data analysis/descriptive statistics')
-## DBsection('Summarizing data in tables')
+## DBsubject(Statistics)
+## DBchapter(Exploratory data analysis/descriptive statistics)
+## DBsection(Summarizing data in tables)
+## Level(3)
 ## level(3)
 ## Jun 8th, 2016
 ## Nelson Chen. 
 ##Attempts: Three. 
 
-
-## DBsubject('Statistics')
-## DBchapter('Probability')
-## DBsection('Independence')
-## Level(5)
-## KEYWORDS('Probability, Independence')
-## Author('Djun Kim')
-## Institution('UBC')
-## Date('2012/09/25')
-
 DOCUMENT();     
 loadMacros(
-  "PGstandard.pl",  
-  "PGauxiliaryFunctions.pl",
+  "PGstandard.pl",
   "MathObjects.pl",
-   "unionTables.pl",
-   "PGchoicemacros.pl",
-"PGstandard.pl",
+  "unionTables.pl",
   "PGchoicemacros.pl",
   "parserRadioButtons.pl",
-  "MathObjects.pl",
   "parserMultiAnswer.pl",
   "RserveClient.pl",
   "answerHints.pl",
   "PGcourse.pl"
-);     
+);
 
 TEXT( beginproblem());
 

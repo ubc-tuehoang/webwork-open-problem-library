@@ -1,7 +1,7 @@
 ## DESCRIPTION
-## DBsubject('Probability')
-## DBchapter('Discrete distributions')
-## DBsection('Normal approximation to binomial')
+## DBsubject(Probability)
+## DBchapter(Discrete distributions)
+## DBsection(Normal approximation to binomial)
 ## Level(4)
 ## KEYWORDS('Probability', 'Normal distribution', 'Binomial distribution', 'Normal
 ## approximation')
@@ -11,26 +11,10 @@
 ##Attempts: Three. 
 
 
-## KEYWORDS('statistics', 'sampling distributions','normal sampling distributions')
-## DBsubject('Statistics')
-## DBchapter('Sampling Distributions and the Central Limit Theorem')
-## DBsection('Central Limit Theorem')
-## Level(5)
-## Date('06/26/2012')
-## Author('Djun Kim and Lance R')
-## Institution('UBC')
-## TitleText1('')
-## EditionText1('')
-## AuthorText1('')
-## Section1('')
-## Problem1('')
-
-
-
 DOCUMENT();        # This should be the first executable line in the problem.
 
 loadMacros(
-"PGstandard.pl",
+  "PGstandard.pl",
   "PGchoicemacros.pl",
   "parserRadioButtons.pl",
   "MathObjects.pl",
@@ -164,6 +148,8 @@ $BR
 \{ $mc1->print_a() \}
 
 END_TEXT
+
+$showPartialCorrectAnswers = 1;
 
 ANS(num_cmp(@ans1[0], tol=>0.002, tolType=>'absolute'));
 ANS( radio_cmp( $mc1->correct_ans() ) );

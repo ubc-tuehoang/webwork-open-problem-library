@@ -1,38 +1,22 @@
 #DESCRIPTION
-## DBsubject('Probability')
-## DBchapter('Discrete distributions')
-## DBsection('Binomial')
+## DBsubject(Probability)
+## DBchapter(Discrete distributions)
+## DBsection(Binomial)
 ## Level(3)
-##KEYWORDS('probability', 'Binomial distribution')
+## KEYWORDS('probability', 'Binomial distribution')
 ##ENDDESCRIPTION
 ##Tagged by Nelson Chen
 ## Jun 9th, 2016. 
 ##Attempts: Two. 
 
 
-
-## DBsubject('Statistics')
-## DBchapter('Distributions')
-## DBsection('Binomial Distribution')
-## Level(4)
-## Date('06/24/2012')
-## Author('Lance R')
-## Institution('University of BC')
-## TitleText1('')
-## EditionText1('')
-## AuthorText1('')
-## Section1('')
-## Problem1('')
-
 DOCUMENT();
 
 loadMacros(
-"PGstandard.pl",
-"MathObjects.pl",
-"PGstandard.pl",
+  "PGstandard.pl",
+  "MathObjects.pl",
   "PGchoicemacros.pl",
   "parserRadioButtons.pl",
-  "MathObjects.pl",
   "parserMultiAnswer.pl",
   "RserveClient.pl",
   "answerHints.pl",
@@ -82,6 +66,8 @@ Probability (as a proportion) \{ ans_rule(6) \}
 END_TEXT
 
 #######
+$showPartialCorrectAnswers = 1;
+
 ANS( num_cmp(@ans[0], tol=> 0.001) );
 
 ## Solution (Optional but recommended)

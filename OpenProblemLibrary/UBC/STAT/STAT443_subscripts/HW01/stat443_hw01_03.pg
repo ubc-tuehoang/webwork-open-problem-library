@@ -1,6 +1,7 @@
-## DBsubject('Probability') 
-## DBchapter('Several variables')
-## DBsection('Covariance & correlation') 
+## DBsubject(Probability)
+## DBchapter(Several variables)
+## DBsection(Covariance & correlation)
+## Level(2)
 ## level(3)
 
 #########################################################
@@ -9,13 +10,15 @@ DOCUMENT();
 loadMacros(
   "PGstandard.pl",
   "PGchoicemacros.pl",
-  "PGcourse.pl",
   "parserRadioButtons.pl",
   "MathObjects.pl",
   "parserMultiAnswer.pl",
   "RserveClient.pl",
   "answerHints.pl",
+  "PGcourse.pl"
 );
+
+TEXT(beginproblem());
 
 #########################################################
 ## Setup: this is where we use Perl and PG objects (Required)

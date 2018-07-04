@@ -1,5 +1,6 @@
 ##DESCRIPTION
 ## Preview Test: Mech 220 Practice Review Quiz
+<<<<<<< HEAD
 ##ENDDESCRIPTION
 
 ##KEYWORDS('multiple choice', 'cylindrical', 'rod', 'forces', 'moments')
@@ -10,6 +11,22 @@
 ## Date('7/5/2017')
 ## Institution('University of British Columbia')
 ## Problem12
+=======
+## Mech 2, Department of Mechanical Engineering, UBC
+##ENDDESCRIPTION
+
+
+## Problem12
+## DBsubject(Statics)
+## DBchapter(Rigid bodies)
+## DBsection(Constraints and statical determinacy)
+## Date(7/5/2017)
+## Institution(University of British Columbia)
+## Level(4)
+## MO(1)
+## KEYWORDS('UBC', 'Mech2', 'MECH220', 'Practice Review Quiz', '220PRQ', 'multiple choice', 'cylindrical', 'rod', 'forces', 'moments')
+## RESOURCES('220-practice-12q.png')
+>>>>>>> upstream/master
 
 ########################################################################
 
@@ -21,7 +38,11 @@ loadMacros(
   "parserRadioButtons.pl",
   "PGcourse.pl"
 );
+<<<<<<< HEAD
 
+=======
+TEXT(beginproblem());
+>>>>>>> upstream/master
 $mc = RadioButtons(
     [ "\( F_x = 0 \)", "\( F_x = 0\) and \(M_y = 0 \)", "\( F_x = 0\) and \(M_z = 0 \)", "\( F_x = 0\), \(M_y = 0\), and \(M_z = 0 \)", "\( F_x = 0\) and \(M_x = 0 \)" ]
     , "\( F_x = 0\) and \(M_x = 0 \)"
@@ -31,7 +52,11 @@ BEGIN_TEXT
 
 A cylindrical air bearing is made by taking a fixed porous rod and fitting around it a slightly oversized sleeve. Air is forced out through the pores in the rod, causing the sleeve to ride on a thin air cushion. Which of the following is the most complete description of what can be said about the forces and moments that the rod imposes on the sleeve?
 $PAR
+<<<<<<< HEAD
 \{ image( "220ReviewQuiz-12.gif", width=>400, height=>146) \}
+=======
+\{ image( "220-practice-12q.png", width=>400, height=>146) \}
+>>>>>>> upstream/master
 $PAR
 \{ $mc->buttons() \}
 

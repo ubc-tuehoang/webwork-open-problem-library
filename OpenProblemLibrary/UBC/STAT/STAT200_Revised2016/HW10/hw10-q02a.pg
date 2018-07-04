@@ -1,22 +1,19 @@
 ##DESCRIPTION
-## DBsubject('Statistics')
-## DBchapter('Hypothesis tests')
-## DBsection('Concepts')
-## Level(4)
 ##ENDDESCRIPTION
-##KEYWORDS('mean', 'inference', 'hypothesis test', 'type I error', 'p-values')
 ##Tagged by Nelson Chen July 11, 2016. 
 ##Attempts: Five
 
 
 
-## DBsubject('Statistics')
-## DBchapter('Hypothesis Testing')
-## DBsection('One Sample - Means, Sigma not known')
-## Level(5)
-## Date('7/13/2012')
-## Author('Djun Kim')
-## Institution('UBC')
+## DBsubject(Statistics)
+## DBchapter(Hypothesis tests)
+## DBsection(One sample mean - t)
+## Date(7/13/2012)
+## Institution(UBC)
+## Author(Djun Kim)
+## Level(3)
+## MO(1)
+## KEYWORDS('mean', 'inference', 'hypothesis test', 'type I error', 'p-values','statistics', 'statistical inference', 'parameter identification', 'errors', 'interpretation')
 
 
 ########################################################################
@@ -24,13 +21,11 @@
 DOCUMENT();      
 
 loadMacros(
-   "PGstandard.pl",     # Standard macros for PG language
-   "MathObjects.pl",
-   "PGchoicemacros.pl",
-   "parserRadioButtons.pl",
-   #"source.pl",        # allows code to be displayed on certain sites.
-   #"PGcourse.pl",      # Customization file for the course
-"answerHints.pl",
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGchoicemacros.pl",
+  "parserRadioButtons.pl",
+  "answerHints.pl",
   "PGcourse.pl"
 );
 

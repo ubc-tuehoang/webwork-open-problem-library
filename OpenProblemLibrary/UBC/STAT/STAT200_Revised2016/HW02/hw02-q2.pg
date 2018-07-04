@@ -1,12 +1,13 @@
 ##DESCRIPTION
 ##DESCRIPTION
-## DBsubject('Statistics')
-## DBchapter('Distributions')
-## DBsection('Normal Distribution')
+## DBsubject(Probability)
+## DBchapter(Continuous distributions)
+## DBsection(Gaussian normal)
+## Institution(University of BC)
+## Author(Lance R)
 ## Level(3)
+## MO(1)
 ## KEYWORDS('Empirical Rule', 'Normal Distribution', 'Probability')
-## Author('Lance R')
-## Institution('University of BC')
 ##ENDDESCRIPTION
 ##Attempts: Two. 
 ##Tagged by Nelson Chen. 
@@ -14,10 +15,10 @@
 
 DOCUMENT();     
 loadMacros(
-  "PGstandard.pl",  
-  "PGauxiliaryFunctions.pl",
+  "PGstandard.pl",
   "MathObjects.pl",
-);     
+  "PGcourse.pl"
+);
 
 TEXT( &beginproblem );
 

@@ -1,19 +1,18 @@
 ##DESCRIPTION
 ##DESCRIPTION
-## DBsubject('Statistics')
-## DBchapter('Distributions')
-## DBsection('Normal Distribution')
+## DBsubject(Probability)
+## DBchapter(Continuous distributions)
+## DBsection(Application of a normal distribution)
+## Institution(University of BC)
 ## Level(3)
 ## KEYWORDS('Empirical Rule', 'Normal Distribution', 'Probability')
-## Author('')
-## Institution('University of BC')
 ##ENDDESCRIPTION
 ##Attempts: Two. 
 
 
 DOCUMENT();     
 loadMacros(
- "PGstandard.pl",
+  "PGstandard.pl",
   "PGchoicemacros.pl",
   "parserRadioButtons.pl",
   "MathObjects.pl",
@@ -21,7 +20,7 @@ loadMacros(
   "RserveClient.pl",
   "answerHints.pl",
   "PGcourse.pl"
-);     
+);
 
 TEXT( &beginproblem );
 

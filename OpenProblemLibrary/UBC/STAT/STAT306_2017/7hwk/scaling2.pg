@@ -5,19 +5,17 @@
 #########################################################
 
 #########################################################
-## KEYWORDS('statistics', 'regression')
 #########################################################
 
 #########################################################
-## DBsubject('Statistics')
-## Date('2015/03/15')
-## Author('H Joe')
-## Institution('UBC')
-## TitleText1('')
-## EditionText1('')
-## AuthorText1('')
-## Section1('')
-## Problem1('')
+## DBsubject(Statistics)
+## DBchapter(Multiple regression)
+## DBsection(Parameter estimates)
+## Date(2015/03/15)
+## Institution(UBC)
+## Author(H Joe)
+## Level(4)
+## KEYWORDS('statistics', 'regression')
 #########################################################
 
 #########################################################

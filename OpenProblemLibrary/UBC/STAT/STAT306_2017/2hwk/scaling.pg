@@ -5,19 +5,17 @@
 #########################################################
 
 #########################################################
-## KEYWORDS('statistics', 'regression')
 #########################################################
 
 #########################################################
-## DBsubject('Statistics')
-## Date('2016/01/23')
-## Author('H Joe')
-## Institution('UBC')
-## TitleText1('')
-## EditionText1('')
-## AuthorText1('')
-## Section1('')
-## Problem1('')
+## DBsubject(Statistics)
+## DBchapter(Multiple regression)
+## DBsection(Parameter estimates)
+## Date(2016/01/23)
+## Institution(UBC)
+## Author(H Joe)
+## Level(4)
+## KEYWORDS('statistics', 'regression')
 #########################################################
 
 #########################################################
@@ -88,10 +86,6 @@ $mcquesc-> makeLast("None of the above");
 # Main Text
 
 BEGIN_TEXT
-$BBOLD Note $EBOLD
-Unlike the other questions where you get around 3 attempts, you only get
-one attempt here, so think carefully before you answer.
-$BR
 For this question and others that might involve derivation of a formula,
 after you formulate an algebraic solution, check its validity
 on some numerical regression examples with small data sets.

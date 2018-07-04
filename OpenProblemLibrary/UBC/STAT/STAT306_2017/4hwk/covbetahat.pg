@@ -7,19 +7,17 @@
 #########################################################
 
 #########################################################
-## KEYWORDS('statistics', 'regression','covariance matrix of estimator')
 #########################################################
 
 #########################################################
-## DBsubject('Statistics')
-## Date('2017/02/15')
-## Author('H Joe')
-## Institution('UBC')
-## TitleText1('')
-## EditionText1('')
-## AuthorText1('')
-## Section1('')
-## Problem1('')
+## DBsubject(Statistics)
+## DBchapter(Multiple regression)
+## DBsection(Parameter estimates)
+## Date(2017/02/15)
+## Institution(UBC)
+## Author(H Joe)
+## Level(4)
+## KEYWORDS('statistics', 'regression','covariance matrix of estimator')
 
 #########################################################
 
@@ -110,8 +108,7 @@ BEGIN_TEXT
 
 You are being given the covariance matrix of a multiple regression 
 with \({\hat\beta}_0,{\hat\beta}_1,\ldots,{\hat\beta}_5,{\hat\beta}_6,
-\ldots,{\hat\beta}_9\) where (compare university admissions data set
-in previous WebWork homework set) \(x_1,\ldots,x_5\) are numerical
+\ldots,{\hat\beta}_9\) where  \(x_1,\ldots,x_5\) are numerical
 explanatory variables and
 \(x_6,\ldots,x_9\) are 4 binary dummy variables for 4 different categories
 relative to the baseline category.

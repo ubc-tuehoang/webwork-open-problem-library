@@ -5,12 +5,12 @@
 # University of British Columbia
 # ENDDESCRIPTION
 
-## DBsubject(Dynamics)
-## DBchapter(Planar Rigid Body Kinetics)
-## DBsection(Mass Moment of Inertia)
+## DBsubject(Statics)
+## DBchapter(Distributed forces: moment of inertia)
+## DBsection(Mass moment of inertia)
 ## Institution(University of British Columbia)
 ## Author(Agnes d’Entremont)
-## Level(3)
+## Level(4)
 ## KEYWORDS(‘Mass moment of inertia’,’difference’,’hip replacement’, ‘intersection’)
 ## RESOURCES('221dynMOI1.png')
 

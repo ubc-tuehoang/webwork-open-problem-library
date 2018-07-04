@@ -5,21 +5,17 @@
 #########################################################
 
 #########################################################
-## KEYWORDS('statistics', 'fractional factorial')
 #########################################################
 
 #########################################################
-## DBsubject('Statistics')
-## DBchapter('Experimental design')
-## DBsection('Concepts')
-## Date('2014/10/28')
-## Author('H Joe')
-## Institution('UBC')
-## TitleText1('')
-## EditionText1('')
-## AuthorText1('')
-## Section1('')
-## Problem1('')
+## DBsubject(Statistics)
+## DBchapter(Experimental design)
+## DBsection(Concepts)
+## Date(2014/10/28)
+## Institution(UBC)
+## Author(H Joe)
+## Level(4)
+## KEYWORDS('statistics', 'fractional factorial')
 #########################################################
 
 #########################################################
@@ -33,6 +29,7 @@ loadMacros(
   "MathObjects.pl",
   "parserMultiAnswer.pl",
   "answerHints.pl",
+  "PGcourse.pl"
 );
 
 Context()->texStrings;

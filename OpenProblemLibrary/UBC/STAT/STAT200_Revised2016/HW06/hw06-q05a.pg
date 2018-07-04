@@ -1,9 +1,4 @@
 #DESCRIPTION
-## DBsubject('Probability')
-## DBchapter('Discrete distributions')
-## DBsection('Normal approximation to binomial')
-## Level(3)
-##KEYWORDS('Probability', 'Binomial distribution', 'Normal approximation')
 ##ENDDESCRIPTION
 ## Tagged by Nelson Chen
 ## Jun 9, 2016. 
@@ -11,25 +6,21 @@
 
 
 
-## DBsubject('Statistics')
-## DBchapter('Distributions')
-## DBsection('Binomial Distribution')
-## Level(4)
-## Date('06/24/2012')
-## Author('Lance R')
-## Institution('University of BC')
-## TitleText1('')
-## EditionText1('')
-## AuthorText1('')
-## Section1('')
-## Problem1('')
+## DBsubject(Probability)
+## DBchapter(Discrete distributions)
+## DBsection(Normal approximation to binomial)
+## Date(06/24/2012)
+## Institution(University of BC)
+## Author(Lance R)
+## Level(3)
+## MO(1)
+## KEYWORDS('Probability', 'Binomial distribution', 'Normal approximation')
 
 DOCUMENT();
 
 loadMacros(
-"PGstandard.pl",
-"parserPopUp.pl",
-"PGstandard.pl",
+  "PGstandard.pl",
+  "parserPopUp.pl",
   "PGchoicemacros.pl",
   "parserRadioButtons.pl",
   "MathObjects.pl",
@@ -85,7 +76,7 @@ BEGIN_TEXT
 A report says that @p[0] % of British Columbians over the age of 25 are high
 school graduates. A survey of randomly selected residents of a certain
 city included @n[0] who were over the age of 25, and 1012 of them were
-high school graduates. Is the citys result of 1012 unusually high, low,
+high school graduates. Is the city's result of 1012 unusually high, low,
 or neither?
 Answer: \{$popup->menu()\}
 

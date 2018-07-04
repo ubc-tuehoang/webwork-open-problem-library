@@ -1,14 +1,17 @@
 ##DESCRIPTION
 ## Preview Test: Self Test - Sketching functions
+## Mech 2, Department of Mechanical Engineering, UBC
 ##ENDDESCRIPTION
 
-##KEYWORDS('multiple choice', 'curve', 'function')
 
-## DBsubject('Precalculus')
-## DBchapter('Transformations of functions and graphs')
-## DBsection('Shifts: vertical and horizontal')
-## Date('6/29/2017')
-## Institution('University of British Columbia')
+## DBsubject(Algebra)
+## DBchapter(Transformations of functions and graphs)
+## DBsection(Horizontal shifts)
+## Date(6/29/2017)
+## Institution(University of British Columbia)
+## Level(2)
+## MO(1)
+## KEYWORDS('UBC', 'Mech2', 'MECH220', '220ST11', 'sketching functions', 'multiple choice', 'curve', 'function')
 ## Problem14
 
 ########################################################################
@@ -19,11 +22,13 @@ loadMacros(
   "PGstandard.pl",
   "MathObjects.pl",
   "parserRadioButtons.pl",
-  "contextFraction.pl",
+#  "contextFraction.pl",
   "PGcourse.pl"
 );
 
-Context("Fraction");
+TEXT(beginproblem());
+
+Context("Numeric");
 
 # Set up possible answers
 $mc = RadioButtons(
@@ -44,8 +49,12 @@ $mc = RadioButtons(
 "Some combination of at least two of the above" ]
     ,labels => "ABC" );
 
+$c0 = random( 1, 3, 1 ) ;
+$c1 = random( 1+$c0, 5, 1 );
+
 BEGIN_TEXT
-Given the function \(y = ae^{b(x + c)}\) where \(a\), \(b\), and \(c\) are all constants. If \(c\) is changed from \(+1\) to \(+2\), what effect will this have on the curve representing \(y\)?
+Given the function \(y = a \, e^{b  (x + c)}\) where \(a\), \(b\), and \(c\) are all constants.
+If \(c\) is changed from \($c0\) to \($c1\), what effect will this have on the curve representing \(y\)?
 $PAR 
 \{ $mc->buttons() \}
 

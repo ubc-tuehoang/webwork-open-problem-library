@@ -1,27 +1,17 @@
 #DESCRIPTION
-## DBsubject('Statistics')
-## DBchapter('Simple linear regression')
-## DBsection('Residuals')
-## Level(3)
-##KEYWORDS('Linear regression', 'residuals', 'model diagnostics')
+## DBsubject(Statistics)
+## DBchapter(Simple linear regression)
+## DBsection(Residuals)
+## Level(2)
+## KEYWORDS('Linear regression', 'residuals', 'model diagnostics','statistics', 'multiple choice', 'variables')
 ##ENDDESCRIPTION
 ##Tagged by Nelson Chen, May 18, 2016. 
 ##Attempts: Two. 
 
-
-## Date('05/18/2012')
-## Author('Lance R')
-## Institution('University of BC')
-## TitleText1('')
-## EditionText1('')
-## AuthorText1('')
-## Section1('')
-## Problem1('')
-
 DOCUMENT();
 
 loadMacros(
-"PGstandard.pl",
+  "PGstandard.pl",
   "PGchoicemacros.pl",
   "parserRadioButtons.pl",
   "MathObjects.pl",

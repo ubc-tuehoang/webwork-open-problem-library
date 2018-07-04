@@ -5,19 +5,17 @@
 #########################################################
 
 #########################################################
-## KEYWORDS('statistics', 'regression', 'coefficient of determination')
 #########################################################
 
 #########################################################
-## DBsubject('Statistics')
-## Date('2016/01/23')
-## Author('H Joe')
-## Institution('UBC')
-## TitleText1('')
-## EditionText1('')
-## AuthorText1('')
-## Section1('')
-## Problem1('')
+## DBsubject(Statistics)
+## DBchapter(Multiple regression)
+## DBsection(Model selection)
+## Date(2016/01/23)
+## Institution(UBC)
+## Author(H Joe)
+## Level(4)
+## KEYWORDS('statistics', 'regression', 'coefficient of determination')
 #########################################################
 
 #########################################################

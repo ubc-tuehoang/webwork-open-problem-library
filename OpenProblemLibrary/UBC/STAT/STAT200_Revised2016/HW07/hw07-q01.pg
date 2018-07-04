@@ -1,34 +1,18 @@
 ##DESCRIPTION
-## DBsubject('Statistics')
-## DBchapter('Confidence intervals')
-## DBsection('One sample proportion')
 ## level(3)
-###KEYWORDS('Sampling distribution', 'sample proportion', 'confidence interval')
+## DBsubject(Statistics)
+## DBchapter(Confidence intervals)
+## DBsection(One sample proportion)
+## Level(3)
+## KEYWORDS('Sampling distribution', 'sample proportion', 'confidence interval')
 ##ENDDESCRIPTION
 ##Tagged by Nelson Chen on Jun, 26, 2016.
 ##Attempts: Two. 
 
-
-
-## DBsubject('Statistics')
-## DBchapter('Estimation')
-## DBsection('Confidence Intervals')
-## Level(2)
-## Date('05/04/2012')
-## Author('Lance R')
-## Institution('University of BC')
-## TitleText1('No Text')
-## EditionText1('?')
-## AuthorText1('?')
-## Section1('?')
-## Problem1('7')
-
 DOCUMENT();
 
 loadMacros(
-"PGstandard.pl",
-"PGchoicemacros.pl",
- "PGstandard.pl",
+  "PGstandard.pl",
   "PGchoicemacros.pl",
   "parserRadioButtons.pl",
   "MathObjects.pl",
@@ -45,7 +29,7 @@ TEXT(  beginproblem() );
 #  Setup
 #
 #
-$showPartialCorrectAnswers = 0;
+$showPartialCorrectAnswers = 1;
 
 $mc1 = new_checkbox_multiple_choice();
 
@@ -72,7 +56,7 @@ END_TEXT
 
 #######
 
-$showPartialCorrectAnswers = 0;
+$showPartialCorrectAnswers = 1;
 
 ANS( checkbox_cmp($mc1->correct_ans) );
 

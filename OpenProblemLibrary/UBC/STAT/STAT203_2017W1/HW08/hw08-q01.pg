@@ -1,15 +1,10 @@
-## DBsubject('Probability')
-## DBchapter('Sample Space')
-## DBsection('Probability: direct computation, inclusion/exclusion')
 ## level(3)
-## Date('')
-## Author('Andy Leung')
-## Institution('The University of British Columbia')
-## TitleText1('')
-## EditionText1('')
-## AuthorText1('')
-## Section1('')
-## Problem1('')
+## DBsubject(Probability)
+## DBchapter(Sample Space)
+## DBsection(Independence)
+## Institution(The University of British Columbia)
+## Author(Andy Leung)
+## Level(2)
 
 
 
@@ -61,7 +56,8 @@ $mc3->makeLast(
 );
 
 $mc4 = new_checkbox_multiple_choice();
-$mc4->qa("Which of the following shows independence between two events  \(M\) and \(V\)? [CHECK ALL THAT APPLY]",
+##  Which of the following shows independence between two events  \(M\) and \(V\)?
+$mc4->qa("If events  \(M\) and \(V\) were independent, which of the following would be true? $SPACE  [CHECK ALL THAT APPLY]",
 "\(P(M \text{ and } V)\) is equal to \(P(M) \times P(V)\).",
 "\(P(M \text{ given } V)\) is equal to \(P(M)\).",
 "\(P(V \text{ given } M)\) is equal to \(P(V)\).",
@@ -81,8 +77,9 @@ $a5 = 0.27;
 Context()->texStrings;
 BEGIN_TEXT
 
-In a large city, 37% of all restaurants accept both master and visa credit cards, and 50% accept master
-cards and 60% accept visa cards. A tourist visiting the city picks at random a restaurant at which to
+In a large city, 37${PERCENT} of all restaurants accept both master and visa credit cards,
+and 50${PERCENT} accept master cards and 60${PERCENT} accept visa cards.
+A tourist visiting the city picks at random a restaurant at which to
 have lunch. Define the following events:
 $BR
 \(M\) = {the randomly chosen restaurant accepts master credit cards},$BR

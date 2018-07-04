@@ -1,22 +1,17 @@
 ## DESCRIPTION
-## DBsubject('Statistics')
-## DBchapter('Sample survey methods')
-## DBsection('Concepts')
-## Level(3)
-## KEYWORDS('Sample surveys', 'bias', 'representative sample')
 ## ENDDESCRIPTION
 ## Tagged by Nelson Chen, May 18, 2016. 
 ##Attempts: Two. 
 
 
-## Date('05/18/2012')
-## Author('Lance R')
-## Institution('University of BC')
-## TitleText1('')
-## EditionText1('')
-## AuthorText1('')
-## Section1('')
-## Problem1('')
+## DBsubject(Statistics)
+## DBchapter(Experimental design)
+## DBsection(Concepts)
+## Date(05/18/2012)
+## Institution(University of BC)
+## Author(Lance R)
+## Level(3)
+## KEYWORDS('Sample surveys', 'bias', 'representative sample','Statistics','Sampling')
 
 
 #
@@ -26,21 +21,15 @@
 DOCUMENT();        # This should be the first executable line in the problem.
 
 loadMacros(
-"PG.pl",
-"PGbasicmacros.pl",
-"PGchoicemacros.pl",
-"PGanswermacros.pl",
-"PGauxiliaryFunctions.pl",
-"PGasu.pl",
-"PGstandard.pl",
+  "PGstandard.pl",
   "PGchoicemacros.pl",
+  "PGasu.pl",
   "parserRadioButtons.pl",
   "MathObjects.pl",
   "parserMultiAnswer.pl",
   "RserveClient.pl",
   "answerHints.pl",
   "PGcourse.pl"
-
 );
 
 

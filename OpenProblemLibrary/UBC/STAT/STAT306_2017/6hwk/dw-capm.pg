@@ -5,19 +5,17 @@
 #########################################################
 
 #########################################################
-## KEYWORDS('statistics', 'regression', 'Durbin-Watson')
 #########################################################
 
 #########################################################
-## DBsubject('Statistics')
-## Date('2017/03/01')
-## Author('H Joe')
-## Institution('UBC')
-## TitleText1('')
-## EditionText1('')
-## AuthorText1('')
-## Section1('')
-## Problem1('')
+## DBsubject(Statistics)
+## DBchapter(Simple linear regression)
+## DBsection(Regression)
+## Date(2017/03/01)
+## Institution(UBC)
+## Author(H Joe)
+## Level(4)
+## KEYWORDS('statistics', 'regression', 'Durbin-Watson')
 #########################################################
 
 #########################################################

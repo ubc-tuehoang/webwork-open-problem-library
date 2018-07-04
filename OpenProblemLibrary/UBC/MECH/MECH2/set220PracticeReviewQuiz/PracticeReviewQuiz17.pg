@@ -1,5 +1,6 @@
 ##DESCRIPTION
 ## Preview Test: Mech 220 Practice Review Quiz
+<<<<<<< HEAD
 ##ENDDESCRIPTION
 
 ##KEYWORDS('multiple choice', 'square', 'root')
@@ -9,6 +10,20 @@
 ## DBsection('Practice Review Quiz')
 ## Date('7/5/2017')
 ## Institution('University of British Columbia')
+=======
+## Mech 2, Department of Mechanical Engineering, UBC
+##ENDDESCRIPTION
+
+
+## DBsubject(Complex analysis)
+## DBchapter(Arithmetic)
+## DBsection(Powers and roots)
+## Date(7/5/2017)
+## Institution(University of British Columbia)
+## Level(3)
+## MO(1)
+## KEYWORDS('UBC', 'Mech2', 'MECH220', 'Practice Review Quiz', '220PRQ', 'multiple choice', 'square', 'root')
+>>>>>>> upstream/master
 ## Problem17
 
 ########################################################################
@@ -22,7 +37,11 @@ loadMacros(
   "contextFraction.pl",
   "PGcourse.pl"
 );
+<<<<<<< HEAD
 
+=======
+TEXT(beginproblem());
+>>>>>>> upstream/master
 Context("Fraction");
 
 $mc = RadioButtons(

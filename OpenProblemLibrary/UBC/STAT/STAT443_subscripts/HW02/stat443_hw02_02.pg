@@ -1,6 +1,6 @@
-## DBsubject(Probability)
-## DBchapter(Stochastic process)
-## DBsection(Markov chain)
+## DBsubject(Statistics)
+## DBchapter(Time series)
+## DBsection(Autocorrelation)
 ## Level(4)
 ## MO(1)
 ## level(4)
@@ -11,15 +11,17 @@ DOCUMENT();
 loadMacros(
   "PGstandard.pl",
   "PGchoicemacros.pl",
-  "PGcourse.pl",
   "PGgraphmacros.pl",
   "parserRadioButtons.pl",
   "MathObjects.pl",
   "parserMultiAnswer.pl",
   "unionTables.pl",
   "parserPopUp.pl",
-  "RserveClient.pl"
+  "RserveClient.pl",
+  "PGcourse.pl"
 );
+
+TEXT(beginproblem());
 
 #########################################################
 ## Setup: this is where we use Perl and PG objects (Required)

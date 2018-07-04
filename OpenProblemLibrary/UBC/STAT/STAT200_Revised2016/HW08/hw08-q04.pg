@@ -1,33 +1,22 @@
 ##DESCRIPTION
-## DBsubject('Statistics')
-##DBchapter('Hypothesis tests')
-##DBsection('Concepts')
-##Level(3)
-##KEYWORDS('hypothesis test', 'p-value')
+## DBsubject(Statistics)
+## DBchapter(Hypothesis tests)
+## DBsection(Concepts)
+## Level(3)
+## KEYWORDS('hypothesis test', 'p-value','statistics', 'statistical inference', 'hypothesis test', 'interpretation')
 ##ENDDESCRIPTION
 ##attempts: Two. 
 ##Tagged by Nelson Chen. 
-
-
-##KEYWORDS('statistics', 'statistical inference', 'hypothesis test', 'p-value', 'interpretation')
-## DBsubject('Statistics')
-## DBchapter('Statistical Inference')
-## DBsection('Hypothesis test')
-## Level(4)
-## Date('10/22/2012')
-## Author('Djun Kim')
-## Institution('UBC')
-
 
 ########################################################################
 
 DOCUMENT();      
 
 loadMacros(
-   "PGstandard.pl",     # Standard macros for PG language
-   "MathObjects.pl",
-   "PGchoicemacros.pl",
-"answerHints.pl",
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGchoicemacros.pl",
+  "answerHints.pl",
   "PGcourse.pl"
 );
 
@@ -52,7 +41,7 @@ $mc1_distractor2 = "No.";
 
 $mc1 = new_multiple_choice();
 $mc1->qa(
-  "Prof. Johnson conducts a hypothesis test on whether the proportion of all UBC students who bike to school (denoted as \( p )\) equals 30$PERCENT. Specifically, Prof.Johnson has \( H_0: p = 0.3 \) versus \( H_A: p \ne 0.3 \). He obtains a \( P \)-value of 0.01. On the other hand, Prof. Smith would like to test if there is sufficient evidence to support that \( p \) is greater than 0.3 at the 10$PERCENT significance level. Based on Prof. Johnson's result, will the null hypothesis of Prof. Smith's test be rejected?",
+  "Prof. Johnson conducts a hypothesis test on whether the proportion of all UBC students who bike to school (denoted as \( p )\) equals 30$PERCENT. Specifically, Prof. Johnson has \( H_0: p = 0.3 \) versus \( H_A: p \ne 0.3 \). He obtains a \( P \)-value of 0.01. On the other hand, Prof. Smith would like to test if there is sufficient evidence to support that \( p \) is greater than 0.3 at the 10$PERCENT significance level. Based on Prof. Johnson's result, will the null hypothesis of Prof. Smith's test be rejected?",
   $mc1_answer
 );
 $mc1->extra(
@@ -83,7 +72,7 @@ Context()->normalStrings;
 
 install_problem_grader(~~&std_problem_grader);
 
-$showPartialCorrectAnswers = 0;
+$showPartialCorrectAnswers = 1;
 
 ANS( radio_cmp( $mc1->correct_ans() ) );
 

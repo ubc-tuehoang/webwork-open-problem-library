@@ -1,5 +1,6 @@
 ##DESCRIPTION
 ## Preview Test: Mech 220 Practice Review Quiz
+<<<<<<< HEAD
 ##ENDDESCRIPTION
 
 ##KEYWORDS('multiple choice', 'truss', 'horizontal', 'force')
@@ -10,6 +11,22 @@
 ## Date('7/5/2017')
 ## Institution('University of British Columbia')
 ## Problem29
+=======
+## Mech 2, Department of Mechanical Engineering, UBC
+##ENDDESCRIPTION
+
+
+## Problem29
+## DBsubject(Statics)
+## DBchapter(Structures)
+## DBsection(Simple trusses)
+## Date(7/5/2017)
+## Institution(University of British Columbia)
+## Level(5)
+## MO(1)
+## KEYWORDS('UBC', 'Mech2', 'MECH220', 'Practice Review Quiz', '220PRQ', 'multiple choice', 'truss', 'horizontal', 'force')
+## RESOURCES('220-practice-29q.png')
+>>>>>>> upstream/master
 
 ########################################################################
 
@@ -22,7 +39,11 @@ loadMacros(
   "contextFraction.pl",
   "PGcourse.pl"
 );
+<<<<<<< HEAD
 
+=======
+TEXT(beginproblem());
+>>>>>>> upstream/master
 $mc = RadioButtons(
     [ "\(7.00\) \(kN\) compression", 
 	"\(7.00\) \(kN\) tension", 
@@ -35,7 +56,11 @@ $mc = RadioButtons(
 BEGIN_TEXT
 The simple truss shown below is subjected to a \(3\) \(kN\) horizontal force applied at the pin \(B\). Neglecting the truss weight, what is the force in the member \(AB\)?
 $PAR
+<<<<<<< HEAD
 \{ image( "220ReviewQuiz-29.gif", width=>400, height=>263) \}
+=======
+\{ image( "220-practice-29q.png", width=>400, height=>263) \}
+>>>>>>> upstream/master
 $PAR
 \{ $mc->buttons() \}
 

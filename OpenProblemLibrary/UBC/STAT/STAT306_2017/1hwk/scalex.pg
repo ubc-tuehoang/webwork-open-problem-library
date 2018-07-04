@@ -5,19 +5,17 @@
 #########################################################
 
 #########################################################
-## KEYWORDS('statistics', 'variance')
 #########################################################
 
 #########################################################
-## DBsubject('Statistics')
-## Date('2016/01/05')
-## Author('H Joe')
-## Institution('UBC')
-## TitleText1('')
-## EditionText1('')
-## AuthorText1('')
-## Section1('')
-## Problem1('')
+## DBsubject(Statistics)
+## DBchapter(Simple linear regression)
+## DBsection(Correlation)
+## Date(2016/01/05)
+## Institution(UBC)
+## Author(H Joe)
+## Level(4)
+## KEYWORDS('statistics', 'variance')
 #########################################################
 
 #########################################################
@@ -95,7 +93,7 @@ Context()->texStrings;
 
 BEGIN_TEXT
 
-Consider \(n=5\) pairs \((x_1,y_1,\ldots,(x_n,y_n)\).
+Consider \(n=5\) pairs \((x_1,y_1),\ldots,(x_n,y_n)\).
 Let \({\overline x}=n^{-1}\sum_{j=1}^n x_j\) and
  \({\overline y}=n^{-1}\sum_{j=1}^n y_j\) be the sample means of the
 \(x\) and \(y\) variables.

@@ -4,12 +4,13 @@
 ##population proportion', 'find approximate confidence interval for a population
 ##size given the count within the population with the characteristic of interest.) 
 # DESCRIPTION
-## DBsubject('Statistics')
-## DBchapter('Hypothesis tests')
-## DBsection('One-way ANOVA')
-## Date('2016/07/22')
-## Author('Bo Chang')
-## Institution('University of British Columbia')
+## DBsubject(Statistics)
+## DBchapter(Hypothesis tests)
+## DBsection(One-way ANOVA)
+## Date(2016/07/22)
+## Institution(University of British Columbia)
+## Author(Bo Chang)
+## Level(3)
 ## level('5')
 
 #########################################################

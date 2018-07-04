@@ -1,15 +1,10 @@
-## DBsubject('Probability')
-## DBchapter('Sample Space')
-## DBsection('Bayes theorem -- inverse probability')
 ## level(3)
-## Date('')
-## Author('Andy Leung')
-## Institution('The University of British Columbia')
-## TitleText1('')
-## EditionText1('')
-## AuthorText1('')
-## Section1('')
-## Problem1('')
+## DBsubject(Probability)
+## DBchapter(Sample Space)
+## DBsection(Bayes theorem -- inverse probability)
+## Institution(The University of British Columbia)
+## Author(Andy Leung)
+## Level(3)
 
 
 
@@ -38,9 +33,9 @@ TEXT(beginproblem());
 Context()->texStrings;
 BEGIN_TEXT
 
-In a particular country, 3% of the population is HIV positive. A test
-for HIV correctly diagnoses 95% of those who have the condition, but
-incorrectly diagnoses 4% of those who are not HIV positive as being
+In a particular country, 3${PERCENT} of the population is HIV positive. A test
+for HIV correctly diagnoses 95${PERCENT} of those who have the condition, but
+incorrectly diagnoses 4${PERCENT} of those who are not HIV positive as being
 HIV positive. A patient obtains a positive test result, apparently indicating
 the presence of HIV. Determine the probability that the patient is really HIV positive. Please round to three decimal places.
 $BR

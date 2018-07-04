@@ -5,17 +5,13 @@
 #########################################################
 
 #########################################################
-## DBsubject('Statistics')
-## DBchapter('Experimental design')
-## DBsection('Concepts')
-## Date('2016/10/14')
-## Author('Bo Chang')
-## Institution('UBC')
-## TitleText1('')
-## EditionText1('')
-## AuthorText1('')
-## Section1('')
-## Problem1('')
+## DBsubject(Statistics)
+## DBchapter(Experimental design)
+## DBsection(Concepts)
+## Date(2016/10/14)
+## Institution(UBC)
+## Author(Bo Chang)
+## Level(3)
 #########################################################
 
 #########################################################
@@ -31,8 +27,8 @@ loadMacros(
   "parserMultiAnswer.pl",
   "RserveClient.pl",
   "answerHints.pl",
-  "PGcourse.pl",
-  "PGML.pl"
+  "PGML.pl",
+  "PGcourse.pl"
 );
 # variables for answers
 

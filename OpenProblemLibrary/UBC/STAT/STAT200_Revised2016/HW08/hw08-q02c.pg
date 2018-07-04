@@ -1,8 +1,9 @@
 ##DESCRIPTION
-## DBsubject('Statistics')
-## DBchapter('Hypothesis tests')
-## DBsection('One sample proportion')
-## Level(3)
+## DBsubject(Statistics)
+## DBchapter(Hypothesis tests)
+## DBsection(One sample proportion)
+## Level(4)
+## KEYWORDS('statistics', 'statistical inference', 'hypothesis test', 'p-value', 'interpretatin')
 ## KEYWORDS('sample proportion', 'hypothesis tests', 'type I error', 'type II
 ## error')
 ##ENDDESCRIPTION
@@ -11,25 +12,15 @@
 
 
 
-##KEYWORDS('statistics', 'statistical inference', 'hypothesis test', 'p-value', 'interpretatin')
-## DBsubject('Statistics')
-## DBchapter('Inference About a Population')
-## DBsection('Misc.')
-## Level(5)
-## Date('7/13/2012')
-## Author('Djun Kim')
-## Institution('UBC')
-
-
 ########################################################################
 
 DOCUMENT();      
 
 loadMacros(
-   "PGstandard.pl",     # Standard macros for PG language
-   "MathObjects.pl",
-   "PGchoicemacros.pl",
-"answerHints.pl",
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGchoicemacros.pl",
+  "answerHints.pl",
   "PGcourse.pl"
 );
 
@@ -278,7 +269,7 @@ Context()->normalStrings;
 #  Answers
 #
 #
-
+$showPartialCorrectAnswers = 1;
 
 ANS( radio_cmp( $mc1->correct_ans() ) );
 ANS( radio_cmp( $mc2->correct_ans() ) );
