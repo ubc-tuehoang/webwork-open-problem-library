@@ -1,17 +1,5 @@
 ##DESCRIPTION
 ## Preview Test: Mech 220 Practice Review Quiz
-<<<<<<< HEAD
-##ENDDESCRIPTION
-
-##KEYWORDS('multiple choice', 'ball', 'velocity', 'horizontal', 'initial')
-
-## DBsubject('MECH 220')
-## DBchapter('Practice Quizzes')
-## DBsection('Practice Review Quiz')
-## Date('7/5/2017')
-## Institution('University of British Columbia')
-## Problem30
-=======
 ## Mech 2, Department of Mechanical Engineering, UBC
 ##ENDDESCRIPTION
 
@@ -26,7 +14,6 @@
 ## MO(1)
 ## KEYWORDS('UBC', 'Mech2', 'MECH220', 'Practice Review Quiz', '220PRQ', 'multiple choice', 'ball', 'velocity', 'horizontal', 'initial')
 ## RESOURCES('220-practice-30q.png')
->>>>>>> upstream/master
 
 ########################################################################
 
@@ -39,11 +26,7 @@ loadMacros(
   "contextFraction.pl",
   "PGcourse.pl"
 );
-<<<<<<< HEAD
-
-=======
 TEXT(beginproblem());
->>>>>>> upstream/master
 $mc = RadioButtons(
     [ "\(0.68\) \(m\)", 
 	"\(0.78\) \(m\)", 
@@ -56,11 +39,7 @@ $mc = RadioButtons(
 BEGIN_TEXT
 A ball has an initial velocity of \(5\) \(m/s\) directed \(40\) degrees downwards from the horizontal. At this location it is \(1\) metre above the ground. How far horizontally from this initial location does it contact the ground? Neglect air friction.
 $PAR
-<<<<<<< HEAD
-\{ image( "220ReviewQuiz-30.gif", width=>400, height=>192) \}$PAR
-=======
 \{ image( "220-practice-30q.png", width=>400, height=>192) \}$PAR
->>>>>>> upstream/master
 \{ $mc->buttons() \}
 
 END_TEXT

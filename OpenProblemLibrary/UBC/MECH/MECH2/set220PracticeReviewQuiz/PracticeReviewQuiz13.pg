@@ -1,17 +1,5 @@
 ##DESCRIPTION
 ## Preview Test: Mech 220 Practice Review Quiz
-<<<<<<< HEAD
-##ENDDESCRIPTION
-
-##KEYWORDS('multiple choice', 'dropped', 'angle', 'horizontal', 'speed', 'altitude')
-
-## DBsubject('MECH 220')
-## DBchapter('Practice Quizzes')
-## DBsection('Practice Review Quiz')
-## Date('7/5/2017')
-## Institution('University of British Columbia')
-## Problem13
-=======
 ## Mech 2, Department of Mechanical Engineering, UBC
 ##ENDDESCRIPTION
 
@@ -26,7 +14,6 @@
 ## MO(1)
 ## KEYWORDS('UBC', 'Mech2', 'MECH220', 'Practice Review Quiz', '220PRQ', 'multiple choice', 'dropped', 'angle', 'horizontal', 'speed', 'altitude')
 ## RESOURCES('220-practice-13q.png')
->>>>>>> upstream/master
 
 ########################################################################
 
@@ -38,11 +25,7 @@ loadMacros(
   "parserRadioButtons.pl",
   "PGcourse.pl"
 );
-<<<<<<< HEAD
-
-=======
 TEXT(beginproblem());
->>>>>>> upstream/master
 $mc = RadioButtons(
     [ "\( (9.81j)m/s^2 \)", "\( (-9.81j)m/s^2 \)", "\( 0 m/s^2 \)", "\( (25\sqrt3i + 9.81j)m/s^2 \)", "\( (25\sqrt3i - 9.81j)m/s^2 \)" ]
     , "\( (-9.81j)m/s^2 \)"
@@ -51,15 +34,9 @@ $mc = RadioButtons(
 BEGIN_TEXT
 As shown below, a package is dropped from a plane that is gaining altitude at an angle of \(30\) degrees to horizontal, with a speed of \(50\) \(m/s\), at an current altitude of \(h = 500\) \(m\). 
 $PAR
-<<<<<<< HEAD
-\{ image( "220ReviewQuiz-13.gif", width=>350, height=>378) \}
-$PAR
-Neglecting air resistance, what is the acceleration of the package at the instant it is dropped from the plane in the (x,y) coordinate frame?
-=======
 \{ image( "220-practice-13q.png", width=>275, height=>378) \}
 $PAR
 Neglecting air resistance, what is the acceleration of the package at the instant it is dropped from the plane in the \((x,y)\) coordinate frame?
->>>>>>> upstream/master
 $PAR
 \{ $mc->buttons() \}
 

@@ -1,17 +1,5 @@
 ##DESCRIPTION
 ## Preview Test: Mech 220 Practice Review Quiz
-<<<<<<< HEAD
-##ENDDESCRIPTION
-
-##KEYWORDS('multiple choice', 'parabola', 'equation')
-
-## DBsubject('MECH 220')
-## DBchapter('Practice Quizzes')
-## DBsection('Practice Review Quiz')
-## Date('7/5/2017')
-## Institution('University of British Columbia')
-## Problem23
-=======
 ## Mech 2, Department of Mechanical Engineering, UBC
 ##ENDDESCRIPTION
 
@@ -26,7 +14,6 @@
 ## MO(1)
 ## KEYWORDS('UBC', 'Mech2', 'MECH220', 'Practice Review Quiz', '220PRQ', 'multiple choice', 'parabola', 'equation')
 ## RESOURCES('220-practice-23q.png')
->>>>>>> upstream/master
 
 ########################################################################
 
@@ -36,13 +23,6 @@ loadMacros(
   "PGstandard.pl",
   "MathObjects.pl",
   "parserRadioButtons.pl",
-<<<<<<< HEAD
-  "contextFraction.pl",
-  "PGcourse.pl"
-);
-
-Context("Fraction");
-=======
 #  "contextFraction.pl",
   "PGcourse.pl"
 );
@@ -50,7 +30,6 @@ Context("Fraction");
 TEXT(beginproblem());
 
 Context("Numeric");
->>>>>>> upstream/master
 
 $mc = RadioButtons(
     [ "\( y = \frac{1}{\sqrt3}x^2 + \sqrt3x+4 \)", 
@@ -59,20 +38,12 @@ $mc = RadioButtons(
 	"\( y = \frac{1}{\sqrt3}x^2 - \sqrt3x+4 \)", 
 	"\( y = \frac{2}{\sqrt3}x^2 - 2\sqrt3x+4 \)" ]
        ,"\( y = \frac{1}{2\sqrt3}x^2 - \sqrt3x+4 \)",
-<<<<<<< HEAD
-         ,labels => "ABC" );
-=======
          ,labels => "ABC" , randomize => 1 );
->>>>>>> upstream/master
 
 BEGIN_TEXT
 What is the equation of the parabola shown below?
 $PAR
-<<<<<<< HEAD
-\{ image( "220ReviewQuiz-23.gif", width=>325, height=>149) \}$PAR
-=======
 \{ image( "220-practice-23q.png", width=>325, height=>149 , tex_size=>600 ) \}$PAR
->>>>>>> upstream/master
 $PAR
 \{ $mc->buttons() \}
 
