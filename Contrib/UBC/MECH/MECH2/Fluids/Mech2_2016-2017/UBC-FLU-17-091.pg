@@ -1,15 +1,14 @@
 ##DESCRIPTION
-## 222 Prelab Flow Viz
+## 
 ##ENDDESCRIPTION
 
-##KEYWORDS('prelab')
 
-## DBsubject('Fluids')
-## DBchapter('Prelab Quizzes')
-## DBsection('Prelab')
-## Date('11/6/2017')
-## Institution('University of British Columbia')
-## Problem 2
+## DBsubject(Fluid mechanics)
+## DBchapter(Flow past immersed bodies)
+## DBsection(Forces on objects immersed in a flow)
+## Date(11/6/2017)
+## Institution(University of British Columbia)
+## KEYWORDS('222PS3')
 
 ########################################################################
 
