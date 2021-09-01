@@ -1,10 +1,9 @@
 #########################################################
 # DESCRIPTION
-## DBsubject(Statistics)
-## DBchapter(Exploratory data analysis/descriptive statistics)
-## DBsection(Graphical representations)
+## DBsubject('Statistics')
+## DBchapter('Exploratory data analysis/descriptive statistics')
+## DBsection('Graphical representations')
 ## Level(3)
-## level(4)
 
 #########################################################
 DOCUMENT();
