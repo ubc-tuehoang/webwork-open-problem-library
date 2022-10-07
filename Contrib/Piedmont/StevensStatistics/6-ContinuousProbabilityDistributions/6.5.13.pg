@@ -3,7 +3,7 @@
 # Uninsured Patients
 # ENDDESCRIPTION
 
-## DBsubject(Statistics)
+## DBsubject(Probability)
 ## DBchapter(Discrete distributions)
 ## DBsection(Normal approximation to binomial)
 ## Level(2)
@@ -34,13 +34,16 @@ $p = 0.48;
 $q = 1 - $p;
 $mu = Compute($n*$p);
 $sigma = Compute(sqrt($n*$p*$q));
-$x = random(round(-3.5*$sigma + $mu), round(-2*$sigma+$mu));
+$x = random(round(-3.4*$sigma + $mu), round(-2*$sigma+$mu));
 
 $z = Compute(($x - $mu)/$sigma)->with(
     tolType => 'absolute',
     tolerance => .005,
 );
-$prob = Compute(Round(normal_prob(-infty, Round($z,2)),4));
+$prob = Compute(Round(normal_prob(-infty, Round($z,2)),4))->with(
+    tolType => 'absolute',
+    tolerance => .00005,
+);;
 
 if ($prob <= 0.05) {
     $is_unusual = "Yes";

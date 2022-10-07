@@ -10,6 +10,7 @@
 ## Author(Benjamin Walter)
 ## Level(3)
 ## MO(1)
+## Static(0)
 
 #######################################
 # Initialization
@@ -18,7 +19,7 @@ DOCUMENT();
 
 loadMacros(
   "PGstandard.pl",
-  "MatrixUnits.pl",
+  "MatrixUnits.pl",              # Needed for GL3Z()
   "MathObjects.pl",
   "parserMultiAnswer.pl",
   "PGmatrixmacros.pl",

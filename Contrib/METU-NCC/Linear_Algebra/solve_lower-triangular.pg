@@ -5,6 +5,9 @@
 ## Author(Benjamin Walter)
 ## Level(3)
 ## KEYWORDS('algebra')
+## MO(1)
+## Static(0)
+
 DOCUMENT();        # This should be the first executable line in the problem.
 
 loadMacros(
