@@ -26,7 +26,7 @@ loadMacros(
 
 Context("Numeric");
 # warn("Student name: $studentName, login: $studentLogin, id: $studentID");
-my $hash = crypt($studentLogin, 'a1');
+my $hash = crypt($studentLogin.$problemSeed, 'a1');
 # warn("crypt: $hash");
 @nums = (0..9,'a'..'z','A'..'Z');
 my %nums = map { $nums[$_] => $_ } 0..$#nums;
